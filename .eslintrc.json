@@ -1,0 +1,4 @@
+{
+    "extends": ["preact", "prettier"],
+    "plugins": ["prettier"]
+}
