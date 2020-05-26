@@ -12,6 +12,7 @@ const App = () => {
     const [countSettings, setCountSettings] = useState({
         spaces: true,
         lineBreaks: true,
+        dots: false,
     });
 
     const textAreaRef = useRef(null);
@@ -25,12 +26,17 @@ const App = () => {
 
         let value = ref.value;
 
+        // также удаляет и переносы строк
         if (!countSettings.spaces) {
             value = value.replace(/\s+/g, '');
         }
 
         if (!countSettings.lineBreaks) {
             value = value.replace(/\r?\n|\r/g, '');
+        }
+
+        if (countSettings.dots) {
+            value += '......';
         }
 
         setTextLength(value.length);
@@ -75,6 +81,11 @@ const App = () => {
                         checked={countSettings.lineBreaks}
                         disabled={!countSettings.spaces}
                         onInput={e => setCountSettings({ ...countSettings, lineBreaks: e.target.checked })}
+                    />
+                    <Checkbox
+                        label="Считать светлые точки?"
+                        checked={countSettings.dots}
+                        onInput={e => setCountSettings({ ...countSettings, dots: e.target.checked })}
                     />
                 </form>
 
