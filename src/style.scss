@@ -13,8 +13,49 @@ body,
 
 body {
     overflow: hidden;
+
+    font-family: sans-serif;
 }
 
 .app {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+    padding: 10px;
+
     text-align: center;
+}
+
+.m {
+    &-t {
+        margin-top: 5px;
+    }
+
+    &-t2 {
+        margin-top: 10px;
+    }
+
+    &-l {
+        margin-left: 5px;
+    }
+}
+
+.textarea {
+    width: 100%;
+    height: 400px;
+    padding: 5px;
+
+    resize: none;
+}
+
+.info {
+    &-input {
+        &-group {
+            & > * {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
 }
