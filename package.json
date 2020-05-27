@@ -1,11 +1,11 @@
 {
-    "name": "megafon-contest-symbols-couter",
+    "name": "megafon-contest-symbols-counter",
     "version": "0.0.0",
     "private": true,
     "license": "MIT",
     "author": "Dmitry <dmitry@cojam.ru> (https://e965.ru)",
-    "repository": "github:e965/megafon-contest-symbols-couter",
-    "homepage": "https://e965.github.io/megafon-contest-symbols-couter",
+    "repository": "github:e965/megafon-contest-symbols-counter",
+    "homepage": "https://e965.github.io/megafon-contest-symbols-counter",
     "scripts": {
         "build": "preact build --no-sw",
         "serve": "sirv build --cors --single",

@@ -100,7 +100,7 @@ const App = () => {
                 </form>
 
                 <p class="m-t2">
-                    <a href="https://github.com/e965/megafon-contest-symbols-couter" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/e965/megafon-contest-symbols-counter" target="_blank" rel="noreferrer">
                         github
                     </a>
                 </p>
