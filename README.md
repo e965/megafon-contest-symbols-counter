@@ -4,7 +4,7 @@
 
 ![picture](.github/picture.png)
 
-https://e965.github.io/megafon-contest-symbols-couter/
+https://e965.github.io/megafon-contest-symbols-counter/
 
 Исходный текст дан в файле `./src/text.json`.
 
