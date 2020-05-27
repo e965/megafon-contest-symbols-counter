@@ -10,9 +10,10 @@ const App = () => {
     const [textLength, setTextLength] = useState(0);
 
     const [countSettings, setCountSettings] = useState({
+        dots: true,
+        dotsChar: true,
         spaces: false,
         lineBreaks: false,
-        dots: true,
     });
 
     const textAreaRef = useRef(null);
@@ -37,6 +38,10 @@ const App = () => {
 
         if (countSettings.dots) {
             value += '......';
+        }
+
+        if (countSettings.dotsChar) {
+            value = value.replace(/\.{3}/g, '…');
         }
 
         setTextLength(value.length);
@@ -72,6 +77,16 @@ const App = () => {
 
                 <form class="m-t2">
                     <Checkbox
+                        label="Считать светлые точки?"
+                        checked={countSettings.dots}
+                        onInput={e => setCountSettings({ ...countSettings, dots: e.target.checked })}
+                    />
+                    <Checkbox
+                        label={'Три точки - это символ многоточия ("…")?'}
+                        checked={countSettings.dotsChar}
+                        onInput={e => setCountSettings({ ...countSettings, dotsChar: e.target.checked })}
+                    />
+                    <Checkbox
                         label="Считать пробелы?"
                         checked={countSettings.spaces}
                         onInput={e => setCountSettings({ ...countSettings, spaces: e.target.checked })}
@@ -81,11 +96,6 @@ const App = () => {
                         checked={countSettings.lineBreaks}
                         disabled={!countSettings.spaces}
                         onInput={e => setCountSettings({ ...countSettings, lineBreaks: e.target.checked })}
-                    />
-                    <Checkbox
-                        label="Считать светлые точки?"
-                        checked={countSettings.dots}
-                        onInput={e => setCountSettings({ ...countSettings, dots: e.target.checked })}
                     />
                 </form>
 
