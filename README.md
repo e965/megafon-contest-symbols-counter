@@ -10,6 +10,8 @@ https://e965.github.io/megafon-contest-symbols-couter/
 
 Ссылка на конкурс, на случай удаления исходной страницы - [тык](https://web.archive.org/web/20200526105345/https://stopgame.ru/megafon).
 
+Истинное количество символов (судя по [посту](https://stopgame.ru/newsdata/43238)) - 2193.
+
 ---
 
 Опубликовано под [лицензией MIT](LICENSE).

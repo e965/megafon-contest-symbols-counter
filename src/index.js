@@ -10,9 +10,9 @@ const App = () => {
     const [textLength, setTextLength] = useState(0);
 
     const [countSettings, setCountSettings] = useState({
-        spaces: true,
-        lineBreaks: true,
-        dots: false,
+        spaces: false,
+        lineBreaks: false,
+        dots: true,
     });
 
     const textAreaRef = useRef(null);
